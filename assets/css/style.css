@@ -1,0 +1,56 @@
+/*
+  ========================================
+  CSS
+  ========================================
+*/
+
+body, .jumbotron{
+    background-color: #F6FCFC;
+}
+
+.jumbotron{
+    border-width: 5px;
+    border-color: #E43f6f;
+    border-style: double;
+}
+
+.jumbotron {
+    margin-top: 10px;
+}
+
+.color1 {
+    color:#4ecdc4 ;
+}
+
+.color2 {
+    color:#f56476;
+}
+
+.color3 {
+    color:#292f36;
+}
+
+/*
+  ========================================
+  Images
+  ========================================
+*/
+
+.main-image{
+   max-width: 90%;
+   height: auto;
+}
+
+/*
+  ========================================
+  Button
+  ========================================
+*/
+
+.reset {
+    background-color:#E43f6f;
+    border-width: 0px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 20px;
+}

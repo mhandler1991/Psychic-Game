@@ -14,38 +14,61 @@
     <!-- Reset -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">    
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barriecito|DM+Serif+Display&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-12">
-                <div class="jumbotron jumbotron-fluid">
+            <div class="col-md-12">
+                <div class="jumbotron jumbotron-fluid" style="width: 100%;">
                     <div class="container">
-                      <h1 class="display-4">The Psychic Game</h1>
-                      <p class="lead">Can you guess what I am thinking of?</p>
+                        <h1 class="display-4 text-center" style="font-family: 'DM Serif Display', serif;">The Psychic
+                            Game</h1>
+                        <p class="lead text-center">Can you guess what I am thinking of?</p>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-12"></div>
+            <div class="col-md-12">
+            </div>
         </div>
         <div class="row">
+            <div class="col-md-6 ">
+                <img class="main-image" src="assets/images/psychic.jpg" alt="">
+            </div>
             <div class="col-md-6">
-                <img src="/assets/images/psychic.jpg" alt="">
+                <h2 class="color3" stlye="font-family: 'Barriecito', cursive;" id="startMessage"></h2>
+                <br>
+                <h2 class="color1" stlye="font-family: 'Barriecito', cursive;">Wins: <a id="playerWins"></a></h2>
+                <br>
+                <h2 class="color2" stlye="font-family: 'Barriecito', cursive;">Losses: <a id="playerLoses"></a></h2>
+                <br>
+                <h2 class="color3" stlye="font-family: 'Barriecito', cursive;">Guesses Left: <a
+                        id="playerGuessesLeft"></a></h2>
+                <br>
+                <h2 class="color3" stlye="font-family: 'Barriecito', cursive;">Your guesses so far: <a
+                        id="playerGuesses"></a></h2>
+                <br>
+                <br><br>
+                <p>Rules:</p>
+                <br><br>
+                <button type="button" class="btn btn-warning reset" id="startReset"
+                    style="font-family: 'DM Serif Display', serif;" onclick="startGame();">Begin</button>
             </div>
-            <div class="col-md-6"></div>
         </div>
     </div>
 
     <!-- Javascript -->
-    <script src="/assets/javascript/app.js"></script>
+    <script src="assets/javascript/app.js"></script>
 
 </body>
 
