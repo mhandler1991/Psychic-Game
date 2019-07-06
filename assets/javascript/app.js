@@ -3,7 +3,7 @@
 var startGame = function () {
 
     //Display Starting Board & Messages
-    document.getElementById("startMessage").innerHTML = "You have 5 gueses, lets begin...";
+    document.getElementById("startMessage").innerHTML = "Lets begin...";
     document.getElementById("playerWins").innerHTML = 0;
     document.getElementById("playerLoses").innerHTML = 0;
     document.getElementById("playerGuessesLeft").innerHTML = 5;
@@ -11,42 +11,43 @@ var startGame = function () {
     document.getElementById("startReset").innerHTML = "Reset";
 
     // Variables
-var playerWins = 0;
-var playerLoses = 0;
-var playerGuessesLeft = 5;
-var playerGuesses = "";
-var letters = [
-    "a",
-    "b",
-    "c",
-    "d",
-    "e",
-    "f",
-    "g",
-    "h",
-    "i",
-    "j",
-    "k",
-    "l",
-    "m",
-    "n",
-    "o",
-    "p",
-    "q",
-    "r",
-    "s",
-    "t",
-    "u",
-    "v",
-    "x",
-    "y",
-    "z"
-];
-var computerChoice = letters[Math.floor(Math.random() * letters.length)];
+    var playerWins = 0;
+    var playerLoses = 0;
+    var playerGuessesLeft = 5;
+    var playerGuesses = "";
+    var letters = [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "h",
+        "i",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "q",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v",
+        "x",
+        "y",
+        "z"
+    ];
+    var computerChoice = letters[Math.floor(Math.random() * letters.length)];
+            // Variable type for computer choice
+            console.log(typeof computerChoice);
 
-//Display Computer Choice
-console.log("Computer Choice: " + computerChoice);
-
+    //Display Computer Choice
+    console.log("Computer Choice: " + computerChoice);
 
 
     // Compare Computer to Person & make calculations on Key Press
@@ -55,6 +56,12 @@ console.log("Computer Choice: " + computerChoice);
         var userInput = event.key.toLowerCase();
         // Log User Input
         console.log("User Choice: " + userInput);
+        // Do the choices match?
+        console.log(computerChoice == userInput);
+        // Type of variable - computer choice
+        console.log("CC " + typeof computerChoice);
+        // Type of variable - user input 
+        console.log("UI " + typeof userInput);
 
         // Determine if player guess is a match
         if (computerChoice == userInput) {
@@ -66,6 +73,14 @@ console.log("Computer Choice: " + computerChoice);
             playerGuessesLeft = 5;
             // Print Guesses Left
             document.getElementById("playerGuessesLeft").innterHTML = playerGuessesLeft;
+            // Computer Chooses new Letter
+            computerChoice = letters[Math.floor(Math.random() * letters.length)];
+            // Console Log New Letter
+            console.log("New Guess: " + computerChoice);
+            // Clear Player Guesses
+            playerGuesses = "";
+            // Print PlayerGuesses
+            document.getElementById("playerGuesses").innerHTML = playerGuesses;
 
         } else {
             // - Guesses Left
@@ -88,7 +103,9 @@ console.log("Computer Choice: " + computerChoice);
             // Print Guesses Left
             document.getElementById("playerGuessesLeft").innterHTML = playerGuessesLeft;
             // Computer Chooses new Letter
-            var computerChoice = letters[Math.floor(Math.random() * letters.length)];
+            computerChoice = letters[Math.floor(Math.random() * letters.length)];
+            // Console Log New Letter
+            console.log("New Guess: " + computerChoice);
             // Clear Player Guesses
             playerGuesses = "";
             // Print PlayerGuesses
@@ -103,12 +120,8 @@ console.log("Computer Choice: " + computerChoice);
 
 
 
-
+// Random Notes:
 // Reset Means: Update Computer Guess, Update Guesses Left, Update Guesses so far
-
-
-
-
 // document.writeln(); << this adds
 // document.onkeyup = function (event) {
 // Object.addEventListener("click", startGame);
